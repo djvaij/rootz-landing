@@ -1,0 +1,66 @@
+.logo {
+  width: 111px;
+  height: 37px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.logo path {
+  transition: transform 1s;
+}
+
+.logo:hover path {
+  transition: transform 1s;
+}
+
+.logo:hover path:nth-of-type(6) {
+  animation: moveUp 1s;
+}
+
+.logo:hover path:nth-of-type(7) {
+  animation: moveUpRight 1s;
+}
+
+.logo:hover path:nth-of-type(8) {
+  animation: moveRight 1s;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUpRight {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px) translateX(10px);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+}
