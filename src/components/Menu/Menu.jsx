@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import styles from './Menu.module.scss';
 import MenuButton from './../MenuButton/MenuButton';
 import { useState } from 'react';
+import ApplyButton from '../ApplyButton/ApplyButton';
 
 const menuItems = [
   {
@@ -58,20 +59,32 @@ function Menu({className}) {
   });
 
   return (
-    <>
+    <nav className={styles.nav}>
       <MenuButton isActive={isActive} onClick={toggleMenu} />
-      <ul
+      <div
         className={classNames(
-          styles.menu,
+          styles.wrapper,
           {
             [styles.open]: isActive,
-          },
-          className
+          }
         )}
       >
-        {list}
-      </ul>
-    </>
+        <ul
+          className={classNames(
+            styles.menu,
+            className
+          )}
+        >
+          {list}
+        </ul>
+        <ApplyButton
+          onClick={() => console.log('ApplyButton click')}
+          className={classNames(
+            styles.applyButton,
+          )}
+        />
+      </div>
+    </nav>
   );
 }
 

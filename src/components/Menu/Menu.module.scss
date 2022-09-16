@@ -1,33 +1,66 @@
 @import '../../styles/variables';
 
-.menu {
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
   position: fixed;
   top: $header-mobile-height;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0;
-  list-style: none;
-  transition: all 0.4s;
-  transform: translateX(100%);
+
+  padding: 0 18px;
+
+  background: $leading-bg;
   
+  transition: all 0.4s;
+
   @media (min-width: $desktop-menu-bp) {
     position: static;
     top: initial;
-    left: initial;
     right: initial;
     bottom: initial;
-    flex-direction: row;
-    transition: none;
+    left: initial;
     transform: none;
+
+    flex-direction: row;
+    align-items: center;
+
+    padding: initial;
+
+    background: none;
+
+    transition: none;
   }
 }
 
-.open.menu {
+.open.wrapper {
   transform: translateX(0);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  margin-bottom: auto;
+  padding: 0;
+
+  list-style: none;
+  
+  @media (min-width: $desktop-menu-bp) {
+    flex-direction: row;
+
+    margin-bottom: initial;
+  }
 }
 
 .item {
@@ -48,13 +81,15 @@
 
 .item a {
   position: relative;
-  opacity: 0.8;
-  text-decoration: none;
-  color: var(--color-black);
-  font-style: normal;
-  font-weight: 400;
+
   font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 42px;
+  color: var(--color-black);
+  text-decoration: none;
+
+  opacity: 0.8;
 
   @media (min-width: $desktop-menu-bp) {
     font-size: 16px;
@@ -64,13 +99,17 @@
 
 .item a::after {
   content: "";
+
   position: absolute;
+  right: 0;
   bottom: -3px;
   left: 0;
-  right: 0;
+
   width: 0;
   margin: auto;
+
   border-bottom: 1px solid var(--color-black);
+
   transition: all 0.3s;
 }
 
@@ -79,6 +118,25 @@
 }
 
 .active a {
-  opacity: 1;
   font-weight: 700;
+
+  opacity: 1;
+}
+
+.applyButton {
+  margin-top: auto;
+  margin-bottom: 72px;
+
+  @media (min-width: $bp-md) {
+    max-width: 145px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $bp-lg) {
+    margin-top: initial;
+    margin-right: initial;
+    margin-bottom: initial;
+    margin-left: 145px;
+  }
 }
