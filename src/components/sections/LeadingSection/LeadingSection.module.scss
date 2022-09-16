@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+.section {
+  display: flex;
+
+  padding-bottom: 128px;
+
+  background: $leading-bg;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inscription {
+  margin-top: 128px;
+}
+
+.left {
+
+}
+
+.text {
+  max-width: 448px;
+  margin-top: 59px;
+  margin-bottom: 48px;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  color: #000000;
+}
+
+.right {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+
+  max-width: 458px;
+  margin-right: (160px - 112px) * -1;
+}
+
+.parrot {
+  position: relative;
+
+  margin-top: 69px;
+}
+
+.card {
+  position: absolute;
+  z-index: 1;
+  bottom: -54px;
+  left: -53px;
+}

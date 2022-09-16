@@ -1,7 +1,8 @@
+import styles from './App.module.scss';
 import { Header } from './layout/Header';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
-import styles from './App.module.scss';
+import { LeadingSection } from './components/sections/LeadingSection';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Logo />
           <Menu />
         </Header>
+        <LeadingSection />
       </div>
     </div>
   );
