@@ -1,0 +1,38 @@
+.search {
+  cursor: text;
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 64px;
+  padding: 8px 8px 8px 21px;
+
+  background: var(--color-white);
+  border-radius: 40px;
+  box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
+}
+
+.icon {
+  cursor: default;
+
+  margin-right: 13px;
+}
+
+.input {
+  width: 119px + 151px - 15px;
+  margin-right: 15px;
+
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color: #807C7C;
+
+  border: none;
+  outline: none;
+}
+
+.button {
+  padding: 0 32px;
+}
