@@ -1,36 +1,56 @@
 @import '../../../styles/variables';
 
 .section {
+  overflow: hidden;
   display: flex;
 
-  padding-bottom: 128px;
-
   background: $leading-bg;
+  
+  @media (min-width: $bp-md) {
+    padding-bottom: 128px;
+  }
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: $bp-lg) {
+    flex-direction: row;
+  }
 }
 
 .inscription {
-  margin-top: 128px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 70px;
+
+  @media (min-width: $bp-md) {
+    margin-top: 128px;
+  }
 }
 
-.left {
-
-}
+.left {}
 
 .text {
   max-width: 448px;
-  margin-top: 59px;
-  margin-bottom: 48px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   font-style: normal;
   line-height: 32px;
   color: #000000;
+
+  @media (min-width: $bp-md) {
+    margin-top: 59px;
+    margin-bottom: 48px;
+
+    font-size: 16px;
+  }
 }
 
 .right {
@@ -42,18 +62,43 @@
   align-items: flex-end;
 
   max-width: 458px;
-  margin-right: (160px - 112px) * -1;
+  
+  @media (min-width: $bp-md) {
+    max-width: initial;
+    margin-right: (160px - 112px) * -1;
+  }
+  
+  @media (min-width: $bp-xl) {
+    max-width: 458px;
+  }
 }
 
 .parrot {
   position: relative;
 
-  margin-top: 69px;
+  margin-top: -8px;
+  margin-right: -199px;
+  
+  @media (min-width: $bp-md) {
+    margin-top: 69px; 
+    margin-right: initial;
+  }
 }
 
 .card {
   position: absolute;
   z-index: 1;
-  bottom: -54px;
-  left: -53px;
+  bottom: 94px;
+  left: 0;
+
+  width: 216px;
+  height: 256px;
+
+  @media (min-width: $bp-xl) {
+    bottom: -54px;
+    left: -53px;
+    
+    width: initial;
+    height: initial;
+  }
 }

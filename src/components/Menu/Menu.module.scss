@@ -7,6 +7,7 @@
 
 .wrapper {
   position: fixed;
+  z-index: 100;
   top: $header-mobile-height;
   right: 0;
   bottom: 0;
@@ -66,7 +67,11 @@
 .item {
   margin: 28px 0;
 
-  @media (min-width: $desktop-menu-bp) {
+  @media (min-width: $bp-lg) {
+    margin: 0 32px;
+  }
+
+  @media (min-width: $bp-xl) {
     margin: 0 51px;
   }
 }

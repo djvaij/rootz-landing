@@ -1,8 +1,8 @@
 @import '../../styles/variables';
 
 .container {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
   padding: 0 18px;
 
   @media (min-width: $bp-md) {
@@ -15,7 +15,11 @@
 }
 
 .xPaddings {
-  padding: 0 80px;
+  padding: 0 18px;
+
+  @media (min-width: $bp-md) {
+    padding: 0 80px;
+  }
 }
 
 .fullWidth {

@@ -12,4 +12,12 @@
   @media (min-width: $bp-md) {
     height: $header-height;
   }
+
+  @media (min-width: $bp-lg) {
+    margin: 0 18px;
+  }
+
+  @media (min-width: 1316px) {
+    margin: initial;
+  }
 }

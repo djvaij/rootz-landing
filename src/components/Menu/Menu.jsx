@@ -4,6 +4,7 @@ import styles from './Menu.module.scss';
 import MenuButton from './../MenuButton/MenuButton';
 import { useState } from 'react';
 import ApplyButton from '../ApplyButton/ApplyButton';
+import { useEffect } from 'react';
 
 const menuItems = [
   {
@@ -34,6 +35,14 @@ function Menu({className}) {
   const toggleMenu = () => {
     setIsActive(prev => !prev);
   };
+
+  useEffect(() => {
+    if (isActive) {
+      window.document.body.classList.add('scroll-disabled');
+    } else {
+      window.document.body.classList.remove('scroll-disabled');
+    }
+  }, [isActive]);
 
   const list = menuItems.map(item => {
     const {title, href, isActive} = item;

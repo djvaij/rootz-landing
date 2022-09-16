@@ -33,7 +33,7 @@
   }
 }
 
-button::after {
+.button::after {
   content: "";
 
   position: absolute;

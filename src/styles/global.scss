@@ -17,6 +17,7 @@
 }
 
 html {
+
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
@@ -24,7 +25,13 @@ html {
 
 body {
   margin: 0;
+
   font-family: 'Poppins', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.scroll-disabled {
+  overflow-y: hidden;
 }

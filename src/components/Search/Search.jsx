@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import styles from './Search.module.scss';
 import { Button } from '../Button';
+import classNames from 'classnames';
 
 const Icon = () => (
   <svg className={styles.icon} width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +31,13 @@ function Search() {
         onFocus={() => setIsInputFocus(() => true)}
         onBlur={() => setIsInputFocus(() => false)}
       />
-      <Button text="search" className={styles.button} />
+      <Button
+        text="search"
+        className={classNames(
+          styles.button,
+          styles.btn
+        )}
+      />
     </div>
   );
 }
