@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.button {
+  cursor: pointer;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+  padding: 0 36px;
+
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 140%;
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background: var(--color-red);
+  border: none;
+  border-radius: 30px;
+  outline: none;
+}
+
+button::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+
+  width: 0;
+  height: calc(100% - 6px);
+  margin: auto;
+
+  opacity: 0.1;
+  background: $leading-bg;
+  border-radius: 40px;
+
+  transition: all 0.4s;
+}
+
+.button:hover::after {
+  width: calc(100% - 6px);
+}
