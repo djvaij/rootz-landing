@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+
+.menu {
+  position: fixed;
+  top: $header-mobile-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  transition: all 0.4s;
+  transform: translateX(100%);
+  
+  @media (min-width: $desktop-menu-bp) {
+    position: static;
+    top: initial;
+    left: initial;
+    right: initial;
+    bottom: initial;
+    flex-direction: row;
+    transition: none;
+    transform: none;
+  }
+}
+
+.open.menu {
+  transform: translateX(0);
+}
+
+.item {
+  margin: 28px 0;
+
+  @media (min-width: $desktop-menu-bp) {
+    margin: 0 51px;
+  }
+}
+
+.item:first-of-type {
+  margin-left: 0;
+}
+
+.item:last-of-type {
+  margin-right: 0;
+}
+
+.item a {
+  position: relative;
+  opacity: 0.8;
+  text-decoration: none;
+  color: var(--color-black);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 42px;
+
+  @media (min-width: $desktop-menu-bp) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+.item a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  width: 0;
+  margin: auto;
+  border-bottom: 1px solid var(--color-black);
+  transition: all 0.3s;
+}
+
+.item a:hover::after {
+  width: 100%;
+}
+
+.active a {
+  opacity: 1;
+  font-weight: 700;
+}

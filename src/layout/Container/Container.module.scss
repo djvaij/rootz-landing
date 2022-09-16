@@ -3,9 +3,14 @@
 .container {
   margin: 0 auto;
   width: 100%;
+  padding: 0 18px;
 
   @media (min-width: $bp-md) {
     max-width: 1280px;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: initial;
   }
 }
 
