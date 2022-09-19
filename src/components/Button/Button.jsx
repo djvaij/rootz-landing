@@ -1,7 +1,12 @@
 import styles from './Button.module.scss';
 import classNames from 'classnames';
 
-function Button({text, className, onClick}) {
+function Button({
+  text,
+  className,
+  onClick,
+  ...props
+}) {
 
   const onCLickHandler = (event) => {
     event.stopPropagation();
@@ -15,6 +20,7 @@ function Button({text, className, onClick}) {
         styles.button,
         className,
       )}
+      {...props}
     >
       {text}
     </button>

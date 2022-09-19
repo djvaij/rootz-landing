@@ -3,7 +3,8 @@ import { Header } from './layout/Header';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { LeadingSection } from './components/sections/LeadingSection';
-import TeamSection from './components/sections/TeamSection/TeamSection';
+import { TeamSection } from './components/sections/TeamSection';
+import { FormSection } from './components/sections/FormSection';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
           <Menu />
         </Header>
         <LeadingSection />
-        <TeamSection />
       </div>
+      <TeamSection />
+      <FormSection />
     </div>
   );
 }
