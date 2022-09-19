@@ -5,6 +5,7 @@ import { Menu } from './components/Menu';
 import { LeadingSection } from './components/sections/LeadingSection';
 import { TeamSection } from './components/sections/TeamSection';
 import { FormSection } from './components/sections/FormSection';
+import { FAQSection } from './components/sections/FAQSection';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </div>
       <TeamSection />
       <FormSection />
+      <FAQSection />
     </div>
   );
 }
