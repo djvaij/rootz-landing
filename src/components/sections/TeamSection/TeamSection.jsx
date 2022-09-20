@@ -14,7 +14,7 @@ function TeamSection() {
         </div>
         <div className={styles.photos}>
           <img data-aos="flip-left" data-aos-offset="-50" src={team1} alt="Team member 1" />
-          <img data-aos="zoom-in" src={team2} alt="Team member 2" />
+          <img data-aos="zoom-in" data-aos-offset="-50" src={team2} alt="Team member 2" />
           <img data-aos="flip-right" data-aos-offset="-50" src={team3} alt="Team member 3" />
         </div>
       </Container> 
