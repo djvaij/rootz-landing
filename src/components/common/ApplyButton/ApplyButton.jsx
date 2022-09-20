@@ -1,10 +1,12 @@
 import styles from './ApplyButton.module.scss';
 import classNames from 'classnames';
 
-function ApplyButton({className}) {
+function ApplyButton({className, setMenuIsActive}) {
 
   const onClickHandler = (event) => {
     event.preventDefault();
+    setMenuIsActive(false);
+    setMenuIsActive()
     const element = document.getElementById('login-form');
 
     if (!element) {
@@ -13,7 +15,7 @@ function ApplyButton({className}) {
 
     const scrollToElementData = element.getBoundingClientRect();
     const scrollY = scrollToElementData.y || scrollToElementData.top;
-    const scrollYPosition = scrollY - 50;
+    const scrollYPosition = window.innerWidth >= 768 ? scrollY - 50 : scrollY;
 
     window.scrollTo({
       top: scrollYPosition,

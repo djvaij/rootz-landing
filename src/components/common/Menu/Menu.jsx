@@ -65,8 +65,10 @@ function Menu({className}) {
 
   useEffect(() => {
     if (isActive) {
+      document.documentElement.classList.add('scroll-disabled');
       window.document.body.classList.add('scroll-disabled');
     } else {
+      document.documentElement.classList.remove('scroll-disabled');
       window.document.body.classList.remove('scroll-disabled');
     }
   }, [isActive]);
@@ -75,6 +77,8 @@ function Menu({className}) {
     const {title, href, isActive, clickHandler} = item;
 
     const onCLick = (e) => {
+      setIsActive(false);
+
       if (clickHandler) {
         return clickHandler(e);
       }
@@ -95,7 +99,7 @@ function Menu({className}) {
             [styles.active]: isActive
           },
         )}
-        key={crypto.randomUUID()}
+        key={item.title}
       >
         <a
           onClick={onCLick}
@@ -130,6 +134,7 @@ function Menu({className}) {
           className={classNames(
             styles.applyButton,
           )}
+          setMenuIsActive={setIsActive}
         />
       </div>
     </nav>

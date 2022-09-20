@@ -24,7 +24,7 @@ function FAQSection() {
     <Collapsible
       title={title}
       description={description}
-      key={crypto.randomUUID() || title}
+      key={title}
       data-aos="fade-left"
       data-aos-offset={50 * (index + 1)}
     />

@@ -61,7 +61,7 @@ function CarouselSection() {
     return (
       <SwiperSlide
         className={styles.slide}
-        key={crypto.randomUUID() || title}
+        key={title}
       >
         <div className={styles.slideWrapper}>
           <img src={image} alt={`Slide ${index}`} />

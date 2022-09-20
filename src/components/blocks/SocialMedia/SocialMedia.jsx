@@ -81,7 +81,7 @@ const SocialMediaItem = ({item}) => {
 function SocialMedia({className}) {
   const socialMediaList = socialMediaData.map((item) => {
     return (
-      <SocialMediaItem item={item} key={crypto.randomUUID() || item.title} />
+      <SocialMediaItem item={item} key={item.title} />
     );
   });
 
