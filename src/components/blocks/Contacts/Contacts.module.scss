@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+.contacts {
+
+}
+
+.title {
+  margin-bottom: 1px;
+
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 48px;
+  color: #333333;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-lg) {
+    margin-bottom: 32px;
+
+    font-size: 34px;
+  }
+}
+
+.content {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color: #333333;
+
+  opacity: 0.75;
+  mix-blend-mode: normal;
+
+  @media (min-width: $bp-lg) {
+    width: 100%;
+    max-width: 157px;
+
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+}

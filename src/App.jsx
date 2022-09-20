@@ -7,6 +7,7 @@ import { TeamSection } from './components/sections/TeamSection';
 import { FormSection } from './components/sections/FormSection';
 import { FAQSection } from './components/sections/FAQSection';
 import { CarouselSection } from './components/sections/CarouselSection';
+import FooterSection from './components/sections/FooterSection/FooterSection';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <FormSection />
       <FAQSection />
       <CarouselSection />
+      <FooterSection />
     </div>
   );
 }
