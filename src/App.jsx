@@ -1,7 +1,7 @@
 import styles from './App.module.scss';
 import { Header } from './layout/Header';
-import { Logo } from './components/Logo';
-import { Menu } from './components/Menu';
+import { Logo } from './components/common/Logo';
+import { Menu } from './components/common/Menu';
 import { LeadingSection } from './components/sections/LeadingSection';
 import { TeamSection } from './components/sections/TeamSection';
 import { FormSection } from './components/sections/FormSection';

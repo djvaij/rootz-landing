@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Menu.module.scss';
-import MenuButton from './../MenuButton/MenuButton';
+import MenuButton from '../MenuButton/MenuButton';
 import { useState } from 'react';
 import ApplyButton from '../ApplyButton/ApplyButton';
 import { useEffect } from 'react';

@@ -1,7 +1,7 @@
 import Container from './../../../layout/Container/Container';
 import styles from './LeadingSection.module.scss';
-import {Inscription, Card, Parrot} from './Elements';
-import {Search} from '../../Search';
+import { Inscription, Card, Parrot } from './Elements';
+import { Search } from '../../common/Search';
 
 
 function LeadingSection() {

@@ -1,6 +1,6 @@
-import Button from '../../Button/Button';
 import Input from '../../forms/Input/Input';
 import styles from './LoginForm.module.scss';
+import { Button } from '../../common/Button';
 
 function LoginForm() {
   const onSubmitHandler = (event) => {

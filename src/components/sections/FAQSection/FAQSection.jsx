@@ -1,6 +1,6 @@
 import { Container } from '../../../layout/Container';
-import { Button } from '../../Button';
-import { Collapsible } from '../../Collapsible';
+import { Button } from '../../common/Button';
+import { Collapsible } from '../../common/Collapsible';
 import styles from './FAQSection.module.scss';
 
 const questions = [
