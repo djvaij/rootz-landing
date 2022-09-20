@@ -18,6 +18,7 @@
 }
 
 html {
+  overflow-x: hidden;
 
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
