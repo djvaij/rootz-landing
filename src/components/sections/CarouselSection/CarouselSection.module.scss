@@ -1,0 +1,49 @@
+.carousel {
+  user-select: none;
+
+  padding: 72px 0;
+
+  background: var(--color-peach);
+}
+
+.carousel img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+.slide {
+  width: 330px;
+  min-height: 283px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0% 0%;
+
+  transition: all 0.4s;
+}
+
+.slideWrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 330px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.slideContent {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 120px 24px 50px 25px;
+
+  text-align: center;
+}
