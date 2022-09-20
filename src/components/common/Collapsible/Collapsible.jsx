@@ -18,7 +18,7 @@ const plusIcon = (
 
 const ToggleIcon = ({isActive}) => isActive ? minusIcon : plusIcon;
 
-function Collapsible({title, description}) {
+function Collapsible({title, description, ...props}) {
   const [isActive, setIsActive] = useState(false);
   const descriptionRef = useRef(null);
 
@@ -34,7 +34,7 @@ function Collapsible({title, description}) {
   };
 
   return (
-    <div className={styles.collapsible}>
+    <div className={styles.collapsible} {...props}>
       <header
         onClick={toggle}
         className={styles.header}

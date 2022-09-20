@@ -20,18 +20,20 @@ const questions = [
 
 function FAQSection() {
 
-  const allQuestions = questions.map(({title, description}) => (
+  const allQuestions = questions.map(({title, description}, index) => (
     <Collapsible
       title={title}
       description={description}
       key={crypto.randomUUID() || title}
+      data-aos="fade-left"
+      data-aos-offset={50 * (index + 1)}
     />
   ));
 
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
-        <div className={styles.infoWrapper}>
+        <div data-aos="flip-left" className={styles.infoWrapper}>
           <h3 className={styles.title}>
             Ready to Get started?
           </h3>

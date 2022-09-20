@@ -166,6 +166,9 @@
 }
 
 .container img {
+  position: relative;
+  z-index: 100;
+
   display: block;
 
   @media (min-width: 1280px) {

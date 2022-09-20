@@ -13,9 +13,9 @@ function TeamSection() {
           <p className={styles.text}>Learn more about how you can save our planet's nature. </p>
         </div>
         <div className={styles.photos}>
-          <img src={team1} alt="Team member 1" />
-          <img src={team2} alt="Team member 2" />
-          <img src={team3} alt="Team member 3" />
+          <img data-aos="flip-left" data-aos-offset="-50" src={team1} alt="Team member 1" />
+          <img data-aos="zoom-in" src={team2} alt="Team member 2" />
+          <img data-aos="flip-right" data-aos-offset="-50" src={team3} alt="Team member 3" />
         </div>
       </Container> 
     </section>
