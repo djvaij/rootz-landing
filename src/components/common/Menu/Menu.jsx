@@ -21,6 +21,12 @@ const menuItems = [
     title: 'Places',
     href: '#places',
     isActive: false,
+    clickHandler: (event) => {
+      const searchInput = document.getElementById('search');
+      setTimeout(() => {
+        searchInput.focus();
+      }, 300);
+    }
   },
   {
     title: 'Team',
@@ -31,6 +37,27 @@ const menuItems = [
 
 function Menu({className}) {
   const [isActive, setIsActive] = useState(false);
+
+  const defaultClickHandler = (event) => {
+    event.preventDefault();
+    const id = new URL(event.target.href).hash;
+    const scrollToElement = document.querySelector(id);
+
+    if (!scrollToElement) {
+      return;
+    }
+
+    const scrollMinus =
+      scrollToElement.dataset.scrollMinus ? parseInt(scrollToElement.dataset.scrollMinus, 10) : 0; 
+
+    const scrollToElementData = scrollToElement.getBoundingClientRect();
+    const scrollY = scrollToElementData.y || scrollToElementData.top;
+    const scrollYPosition = scrollY - scrollMinus;
+
+    window.scrollTo({
+      top: scrollYPosition,
+    });
+  };
 
   const toggleMenu = () => {
     setIsActive(prev => !prev);
@@ -45,7 +72,20 @@ function Menu({className}) {
   }, [isActive]);
 
   const list = menuItems.map(item => {
-    const {title, href, isActive} = item;
+    const {title, href, isActive, clickHandler} = item;
+
+    const onCLick = (e) => {
+      if (clickHandler) {
+        return clickHandler(e);
+      }
+
+      if (isActive) {
+        e.preventDefault();
+        return
+      }
+
+      return defaultClickHandler(e);
+    };
 
     return (
       <li
@@ -58,7 +98,7 @@ function Menu({className}) {
         key={crypto.randomUUID()}
       >
         <a
-          onClick={isActive ? (e) => e.preventDefault() : null}
+          onClick={onCLick}
           href={href}
         >
           {title}
@@ -87,7 +127,6 @@ function Menu({className}) {
           {list}
         </ul>
         <ApplyButton
-          onClick={() => console.log('ApplyButton click')}
           className={classNames(
             styles.applyButton,
           )}

@@ -13,7 +13,7 @@ function LoginForm() {
       className={styles.form}
     >
       <div className={styles.title}>Log in</div>
-      <Input placeholder="Name" className={styles.input} />
+      <Input id="name" placeholder="Name" className={styles.input} />
       <Input type="email" placeholder="Email" className={styles.input} />
       <Button
         className={styles.submitButton}

@@ -75,7 +75,7 @@ function CarouselSection() {
   })
 
   return (
-    <section className={styles.carousel}>
+    <section id="mission" data-scroll-minus="80" className={styles.carousel}>
       <Swiper
         slidesPerView={1}
         centeredSlides={true}

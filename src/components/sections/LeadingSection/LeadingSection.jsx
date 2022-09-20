@@ -6,7 +6,7 @@ import { Search } from '../../common/Search';
 
 function LeadingSection() {
   return (
-    <section className={styles.section}>
+    <section id="places" className={styles.section}>
       <Container className={styles.container}>
         <div className={styles.left}>
           <Inscription />

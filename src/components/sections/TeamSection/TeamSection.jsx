@@ -6,7 +6,7 @@ import team3 from '../../../assets/team3.png';
 
 function TeamSection() {
   return (
-    <section className={styles.team}>
+    <section id="team" className={styles.team}>
       <Container className={styles.container}>
         <div className={styles.info}>
           <h3 className={styles.title}>Our top team</h3>

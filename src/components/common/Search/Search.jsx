@@ -24,6 +24,7 @@ function Search() {
     >
       <Icon />
       <input
+        id="search"
         ref={inputRef}
         className={styles.input}
         type="text"

@@ -4,7 +4,7 @@ import { LoginForm } from '../../blocks/LoginForm';
 
 function FormSection() {
   return (
-    <section className={styles.section}>
+    <section id="login-form" className={styles.section}>
       <Container className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.infoWrapper}>
